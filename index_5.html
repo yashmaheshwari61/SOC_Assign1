@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Window</title>
+  </head>
+  <body><center>
+    <h1>My First sub-window</h1>
+    <form>Enter URL:
+      <input type="text" id="url">
+      <input type="button" name="" value="Go!" onclick="openWebsite()">
+    </form><br>Enter Size in pixels:
+    <form><br>Height:
+      <input type="text" id="height" size="10">          Width:
+      <input type="text" id="width" size="10">
+      <input type="button" name="" value="Set" onclick="resiz()">
+    </form>
+    <br>
+    <iframe id="window" width="50%" height="50%"></iframe>
+  </center></body>
+  <script>
+    function openWebsite(){
+      var str=document.getElementById("url").value;
+      document.getElementById("window").src=str;
+    }
+
+    function resiz(){
+      var high=document.getElementById("height").value;
+      var wide=document.getElementById("width").value;
+      document.getElementById("window").width=wide+"px";
+      document.getElementById("window").height=high+"px";
+    }
+  </script>
+</html>
